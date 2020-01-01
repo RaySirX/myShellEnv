@@ -1,0 +1,6 @@
+#!/bin/bash
+
+apt-get install ruby-devel
+gem install rake
+gem install krane
+gem install ejson
