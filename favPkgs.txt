@@ -1,0 +1,8 @@
+ubuntu:zsh
+ubuntu:git
+ubuntu:jq
+ubuntu:tmux
+ubuntu:screen
+ubuntu:glances
+ubuntu:docker.io
+ubuntu:docker-compose
