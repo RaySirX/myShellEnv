@@ -1,6 +1,10 @@
-#!/bin/bash
+#!/bin/bash -xe
 
-apt-get install ruby-devel
-gem install rake
-gem install krane
-gem install ejson
+#apt-get install ruby-devel
+#gem install rake
+#gem install krane
+#gem install ejson
+
+./installChromeBrowser
+
+apt-get install virtualbox

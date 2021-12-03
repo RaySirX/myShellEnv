@@ -1,0 +1,5 @@
+#!/bin/bash -xe
+TMPDIR=$(mktemp -d)
+wget -P ${TMPDIR?} https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+apt install -y ${TMPDIR}/google-chrome-stable_current_amd64.deb
+rm -rf ${TMPDIR}
