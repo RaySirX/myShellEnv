@@ -1,0 +1,56 @@
+#! /bin/bash
+#
+#U NAME
+#U    installPkgs - install favorite packages
+#U
+#U SYNOPSIS
+#U    installPkgs <ubuntu|centos|macos>
+#U
+#U DESCRIPTION
+#U    install favorite packages depending on OS
+#U
+#U OPTIONS
+#U    <ubuntu|centos|macos>
+#U
+#
+# History
+#     Raymond Tai - Jan 1, 2017 - Initial Implementation
+#
+function usage() {
+# usage - Any comment in script starting with '#U' will show up in "usage"
+  egrep "^#U" $0 | sed -e 's/^#U //g' -e 's/^#U//g'
+  exit 1
+}
+
+function timestamp() {
+  date +"%F %T"
+}
+
+function logMessage() {
+  echo $(timestamp) - $1
+}
+
+function logSection() {
+  logMessage "-------------------------------------------"
+  logMessage "$1"
+  logMessage "-------------------------------------------"
+}
+
+function ubuntu() {
+  egrep "^ubuntu" "favPkgs.txt" | cut -d: -f2
+}
+
+#
+# Start of use case
+#
+logSection "$0"
+
+ubuntu | while read pkg; do
+  logMessage ${pkg}
+  apt install -y ${pkg}
+done
+
+#
+# End of use case
+#
+logSection "DONE"

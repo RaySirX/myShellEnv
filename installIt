@@ -5,6 +5,8 @@
 #gem install krane
 #gem install ejson
 
+./setupZsh
+./install-oh-my-zsh
 ./installChromeBrowser
 
 apt-get install virtualbox

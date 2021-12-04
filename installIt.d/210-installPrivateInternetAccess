@@ -1,0 +1,10 @@
+#!/bin/bash
+
+TMPDIR=$(mktemp -d)
+
+wget -P ${TMPDIR?} https://installers.privateinternetaccess.com/download/pia-linux-3.1.2-06767.run
+chmod +x ${TMPDIR}/pia-linux-3.1.2-06767.run
+${TMPDIR}/pia-linux-3.1.2-06767.run
+
+rm -rf ${TMPDIR}
+

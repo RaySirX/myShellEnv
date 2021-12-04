@@ -6,3 +6,7 @@ ubuntu:screen
 ubuntu:glances
 ubuntu:docker.io
 ubuntu:docker-compose
+ubuntu:tilix
+ubuntu:torbrowser-launcher
+ubuntu:code
+ubuntu:steam

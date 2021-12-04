@@ -6,5 +6,5 @@ if [ ${thisUser} = "root" ]; then
    thisUser="ryt704"
 fi
 
-apt-get install zsh
+apt install -y zsh
 usermod -s $(which zsh) $thisUser
