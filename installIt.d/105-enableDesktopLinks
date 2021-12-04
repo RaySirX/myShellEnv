@@ -1,0 +1,4 @@
+#!/bin/bash
+for i in ~/Desktop/*.desktop; do
+  gio set $i metadata::trusted true
+done
