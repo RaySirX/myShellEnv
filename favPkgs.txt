@@ -10,3 +10,5 @@ ubuntu:tilix
 ubuntu:torbrowser-launcher
 ubuntu:code
 ubuntu:steam
+ubuntu:telegram-desktop
+ubuntu:conky
