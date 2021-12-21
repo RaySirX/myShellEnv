@@ -1,3 +1,4 @@
+ubuntu:fonts-powerline
 ubuntu:zsh
 ubuntu:git
 ubuntu:jq
@@ -10,5 +11,5 @@ ubuntu:tilix
 ubuntu:torbrowser-launcher
 ubuntu:code
 ubuntu:steam
-ubuntu:telegram-desktop
 ubuntu:conky
+ubuntu:openssh-server
