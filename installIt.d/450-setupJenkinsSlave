@@ -1,0 +1,7 @@
+#!/bin/bash
+useradd -c "Jenkins" -m -s /bin/bash jenkins
+mkdir -p /var/jenkins
+chown jenkins:jenkins /var/jenkins
+mkdir /home/jenkins/.ssh
+ssh-keygen -t rsa -f /home/jenkins/.ssh/id_rsa
+chown -R jenkins:jenkins /home/jenkins
