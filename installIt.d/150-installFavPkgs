@@ -37,7 +37,7 @@ function logSection() {
 }
 
 function ubuntu() {
-  egrep "^ubuntu" "favPkgs.txt" | cut -d: -f2
+  egrep "^ubuntu" "../favPkgs.txt" | cut -d: -f2
 }
 
 #
