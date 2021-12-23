@@ -3,5 +3,12 @@ useradd -c "Jenkins" -m -s /bin/bash jenkins
 mkdir -p /var/jenkins
 chown jenkins:jenkins /var/jenkins
 mkdir /home/jenkins/.ssh
+chown 700 /home/jenkins/.ssh
 ssh-keygen -t rsa -f /home/jenkins/.ssh/id_rsa
+
+cat < EOF >> /home/jenkins/.ssh/authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCzYjVwaaQ6bGcdZxX5SreRylml/FVAZNNIDQwamvVS1zWf7aY8DFs9y6ba2/VOF9eJPcvoF4ALS8TlFGFjlwx665zxeoM33EIXlLgS8QGqvR8MfbZH9wL3MOeNa6ulX1p9UhDtaLfi1Ici7ROgvsx8WBwNY2dRiWA/wxNvIjOPQXFW2JTtTgJY3SK9hNdh10jxEEsRCsiiV6gZ82iWuHlOfQ2SgS3Gq67MY78Zkx6YSH5XqGr+6eBt/sh3yAjEqOJrBL+Lj2tMgX6rnlHQjaRhdN7L7UwtOQhf1SZGW4fqwG0vvH++d37YDzHmZgdDY8j8yvhHAPEXaYAbh9KdJuLdKpYaltzTfri1VGGLh9VzMFQ5uFEUsk3DjDJ68aNtuNXIm6ujpCo+g40wsFTjlVprTbniwp4kP/lAlUgxWn65tAkfI9HJrmV0xM7RCkQYg/IafMzKEsdNrQ9r+vosO1nsckLXrsalOKakLIYPPqvIWi+ejeYQV0JYDtVwGMwJuxU= jenkins@e5d5ab372a23
+EOF
+
+
 chown -R jenkins:jenkins /home/jenkins
