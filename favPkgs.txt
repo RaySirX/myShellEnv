@@ -1,3 +1,5 @@
+ubuntu:net-tools
+ubuntu:openjdk-11-jre-headless
 ubuntu:fonts-powerline
 ubuntu:zsh
 ubuntu:git
