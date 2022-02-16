@@ -3,8 +3,8 @@
 thisUser=${1:-"$(whoami)"}
 
 if [ ${thisUser} = "root" ]; then
-   thisUser="rtai"
+   thisUser="ryt704"
 fi
 
-apt install -y zsh
+apt-get install zsh
 usermod -s $(which zsh) $thisUser

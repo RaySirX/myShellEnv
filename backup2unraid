@@ -1,2 +1,2 @@
 #!/bin/bash
-rsync -zaxvp /home/ryt704/ 192.168.1.5:/mnt/disk2/Rayz/PC/pop-os/
+rsync -zaxvp /home/rtai/ 192.168.1.5:/mnt/disk2/Rayz/PC/pop-os/

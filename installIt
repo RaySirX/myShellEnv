@@ -5,8 +5,12 @@
 #gem install krane
 #gem install ejson
 
-./setupZsh
-./install-oh-my-zsh
-./installChromeBrowser
+egrep "^ubuntu" "favPkgs.txt" | cut -d: -f2 | while read pkg; do
+  apt-get -y install $pkg
+done
 
-apt-get install virtualbox
+#./setupZsh
+#./install-oh-my-zsh
+#./installChromeBrowser
+
+#apt-get install virtualbox
