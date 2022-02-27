@@ -21,3 +21,5 @@ ubuntu:openssh-server
 ubuntu:notepadqq
 ubuntu:poppler-utils
 ubuntu:golang
+ubuntu:powerline
+ubuntu:fonts-powerline

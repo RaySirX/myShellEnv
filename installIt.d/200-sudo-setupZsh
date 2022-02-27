@@ -6,5 +6,4 @@ if [ ${thisUser} = "root" ]; then
    thisUser="rtai"
 fi
 
-apt install -y zsh
 usermod -s $(which zsh) $thisUser
