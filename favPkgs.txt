@@ -22,3 +22,5 @@ ubuntu:notepadqq
 ubuntu:poppler-utils
 ubuntu:golang
 ubuntu:awscli
+ubuntu:powerline
+ubuntu:fonts-powerline
