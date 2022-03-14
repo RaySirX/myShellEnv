@@ -1,2 +1,0 @@
-#!/bin/bash
-rsync -zaxvp /home/rtai/ root@192.168.1.5:/mnt/disk2/Rayz/PC/pop-os/
