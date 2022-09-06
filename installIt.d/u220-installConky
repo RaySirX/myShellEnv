@@ -7,4 +7,4 @@ if [ ! -d ~/.conky ]; then
   cp titus-conky/Titus.conkyrc .
 fi
 
-ln -s ${HOME}/.conky/conky-startup.sh /etc/profile.d
+sudo ln -fs ${HOME}/.conky/conky-startup.sh /etc/profile.d
