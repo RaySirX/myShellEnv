@@ -3,8 +3,12 @@ if [ ! -d ~/.conky ]; then
   mkdir -p ~/.conky
   cd ~/.conky
   git clone https://github.com/ChrisTitusTech/titus-conky
-  cp titus-conky/conky-startup.sh .
+#  cp titus-conky/conky-startup.sh .
   cp titus-conky/Titus.conkyrc .
+  cat << EOF > ~/.conky/conky-startup.sh
+killall -q conky
+sleep 20s && conky -c "${HOME?}/.conky/Titus.conkyrc" &
+EOF
 fi
 
 sudo ln -fs ${HOME}/.conky/conky-startup.sh /etc/profile.d
