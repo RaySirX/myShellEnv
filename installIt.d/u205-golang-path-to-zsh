@@ -1,0 +1,10 @@
+#!/bin/bash -xe
+
+if [ -d /usr/local/go ]; then
+cat << 'EOF' >> ~/.zshrc
+#
+# add /usr/local/go/bin to PATH
+#
+pathadd $(whereis go | cut -d' ' -f2)/bin
+EOF
+fi
