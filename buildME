@@ -2,5 +2,9 @@
 
 for i in installIt.d/*-sudo-*; do
   echo "$i ---------------------------"
-  sudo $i
+  if [ -x $i ]; then
+     sudo $i
+  else
+     echo SKIPPED - $i
+  fi
 done
