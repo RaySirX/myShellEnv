@@ -1,5 +1,5 @@
-#! /bin/bash
+#! /bin/bash -xe
 
-apt-get install -y powerline fonts-powerline
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+chsh --shell $(which zsh)

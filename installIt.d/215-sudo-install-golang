@@ -1,0 +1,11 @@
+#!/bin/bash -xe
+
+downloadDir=$(mktemp -d)
+goVersion=$(curl -sL 'https://golang.org/VERSION?m=text')
+
+wget "https://dl.google.com/go/${goVersion?}.linux-amd64.tar.gz" -P ${downloadDir?}
+
+rm -rf /usr/local/go && tar -C /usr/local -xzf ${downloadDir}/${goVersion}.linux-amd64.tar.gz
+
+#rm -rf ${downloadDir?}
+ln -fs /usr/local/go/bin /usr/local/bin

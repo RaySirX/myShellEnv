@@ -1,0 +1,33 @@
+#!/bin/bash -xe
+
+installDir=$(mktemp -d)
+installFile=${installDir?}/dne
+destFile=~/.zshrc
+
+touch ${destFile}
+
+cat << 'EOF' - ${destFile} > ${installFile}
+#
+# add to PATH if not there
+#
+pathadd() {
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        export PATH="${PATH:+"$PATH:"}$1"
+        echo "Added $1 to PATH"
+    fi
+}
+
+EOF
+
+cat << 'EOF' >> ${installFile}
+
+export PROMPT='$USER@%{$fg[white]%}%M '$PROMPT
+alias tf=/usr/bin/terraform
+alias k=/usr/bin/kubectl
+alias history="history -i"
+
+pathadd $(whereis go | cut -d' ' -f2)/bin
+EOF
+
+cp ${installFile?} ${destFile?}
+rm -rf ${installDir?}

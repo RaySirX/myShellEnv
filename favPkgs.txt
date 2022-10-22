@@ -2,6 +2,7 @@ ubuntu:net-tools
 ubuntu:openjdk-11-jre-headless
 ubuntu:fonts-powerline
 ubuntu:zsh
+ubuntu:vim
 ubuntu:git
 ubuntu:jq
 ubuntu:atop
@@ -19,4 +20,6 @@ ubuntu:conky
 ubuntu:openssh-server
 ubuntu:notepadqq
 ubuntu:poppler-utils
-ubuntu:golang
+ubuntu:awscli
+ubuntu:powerline
+ubuntu:fonts-powerline
