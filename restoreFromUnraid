@@ -1,2 +1,2 @@
 #!/bin/bash
-rsync -zaxv root@192.168.1.5:/mnt/disk2/Rayz/PC/pop-os/ /home/rtai
+rsync -zaxv root@192.168.1.5:/mnt/disk2/Rayz/PC/main.home/ /home/rtai

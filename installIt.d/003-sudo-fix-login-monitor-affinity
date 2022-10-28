@@ -1,0 +1,2 @@
+#!/bin/bash
+cp ~/.config/monitors.xml ~gdm/.config/
