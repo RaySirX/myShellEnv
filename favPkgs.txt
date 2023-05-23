@@ -24,3 +24,9 @@ ubuntu:poppler-utils
 ubuntu:awscli
 ubuntu:powerline
 ubuntu:fonts-powerline
+ubuntu:unzip
+ubuntu:qemu-user-static
+ubuntu:e2fsprogs
+ubuntu:dosfstools
+ubuntu:libarchive-tools
+mint:python3-pip
