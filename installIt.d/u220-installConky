@@ -6,9 +6,9 @@ if [ ! -d ~/.conky ]; then
 #  cp titus-conky/conky-startup.sh .
   cp titus-conky/Titus.conkyrc .
   cat << 'EOF' > ~/.conky/conky-startup.sh
-if [ "$(whoami)" = "rtai" ]; then
+if [ "$(whoami)" = "${ME_USER?}" ]; then
   killall -q conky
-  sleep 20s && conky -c "/home/rtai/.conky/Titus.conkyrc" &
+  sleep 20s && conky -c "/home/${ME_USER?}/.conky/Titus.conkyrc" &
 fi
 EOF
 fi

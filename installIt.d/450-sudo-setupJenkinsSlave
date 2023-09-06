@@ -14,6 +14,6 @@ EOF
 chown -R jenkins:jenkins /home/jenkins
 
 cat << EOF > /etc/sudoers.d/jenkins
-jenkins ALL=(rtai:rtai) NOPASSWD:/usr/bin/rsync
+jenkins ALL=(${ME_USER?}:${ME_USER}) NOPASSWD:/usr/bin/rsync
 EOF
 

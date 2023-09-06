@@ -1,9 +1,9 @@
 #! /bin/bash -xe
 
-thisUser=${1:-"$(whoami)"}
+thisUser=${1:-${ME_USER?}"}
 
 if [ ${thisUser} = "root" ]; then
-   thisUser="rtai"
+   thisUser=${ME_USER}
 fi
 
 usermod -s $(which zsh) $thisUser

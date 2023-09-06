@@ -1,4 +1,4 @@
 #! /bin/bash
-cat << EOF > /etc/sudoers.d/rtai
-rtai ALL=(ALL:ALL) ALL
+cat << EOF > /etc/sudoers.d/${ME_USER?}
+${ME_USER} ALL=(ALL:ALL) ALL
 EOF
