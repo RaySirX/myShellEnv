@@ -1,0 +1,4 @@
+#! /bin/bash
+cat << EOF > /etc/sudoers.d/rtai
+rtai ALL=(ALL:ALL) ALL
+EOF
