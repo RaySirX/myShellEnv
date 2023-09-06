@@ -1,0 +1,8 @@
+#!/bin/bash
+
+[ -f ~/.gitconfig ] && cp ~/.gitconfig ~/.gitconfig.bak
+
+git config --global pull.rebase true
+git config --global fetch.prune true
+git config --global diff.colorMoved zebra
+git config --global diff.tool sdiff
