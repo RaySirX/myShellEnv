@@ -1,0 +1,2 @@
+#!/bin/bash
+nohup rsync -zaxvp --delete --delete-excluded --exclude '.cache' --exclude 'Downloads/.stuff' --exclude '.local' /home/rtai/ root@192.168.100.10:/mnt/disk2/Rayz/PC/$(hostname)/ &
