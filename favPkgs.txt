@@ -29,4 +29,8 @@ ubuntu:qemu-user-static
 ubuntu:e2fsprogs
 ubuntu:dosfstools
 ubuntu:libarchive-tools
+ubuntu:samba
+ubuntu:samba-common-bin
+ubuntu:smbclient
+ubu8ntu:cifs-utils
 mint:python3-pip
