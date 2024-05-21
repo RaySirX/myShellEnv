@@ -1,0 +1,63 @@
+#! /bin/bash
+#
+#U NAME
+#U    installPkgs - install favorite packages
+#U
+#U SYNOPSIS
+#U    installPkgs <ubuntu|centos|macos>
+#U
+#U DESCRIPTION
+#U    install favorite packages depending on OS
+#U
+#U OPTIONS
+#U    <ubuntu|centos|macos>
+#U
+#
+# History
+#     Raymond Tai - Jan 1, 2017 - Initial Implementation
+#
+function usage() {
+# usage - Any comment in script starting with '#U' will show up in "usage"
+  egrep "^#U" $0 | sed -e 's/^#U //g' -e 's/^#U//g'
+  exit 1
+}
+
+function onErrorExit() {
+# onErrorExit - if status is non-zero print message and exit
+  local status=$1
+  local message=${2:-Exiting due to unexpected status code ${status}}
+  if [ ${status} -ne 0 ]; then
+     logSection $2
+     exit 998
+  fi
+}
+
+function ubuntu() {
+  egrep "^ubuntu" | cut -d: -f2 "favPkgs.txt"
+}
+#
+# parse arguments
+#
+thisOS=${1?"Dont leave me guessing.... ubuntu, centos or macos?"}
+
+#
+# Check initial conditions, arguments, san
+#
+if [ "${checkCondition}" = "Unknown" ]; then
+  usage
+  exit 1
+fi
+
+#
+# Start of use case
+#
+logSection "$0"
+
+runSomething
+status=$?
+onErrorExit ${status} "runSomething went wrong"
+onErrorExit $(runSomethingThatReturnsNumericStatus)
+#
+# End of use case
+#
+logSection "DONE"
