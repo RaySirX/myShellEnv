@@ -1,2 +1,4 @@
 *.log
 nohup.out
+tmp/*
+tmp*
