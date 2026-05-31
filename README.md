@@ -39,3 +39,11 @@ Instead of
 deb https://repo.radeon.com/amdgpu/22.20/ubuntu focal main
 Should be
 deb https://repo.radeon.com/amdgpu/22.20/ubuntu jammy main
+
+# Resolve IP address
+```
+ifdev=$(ip -j route | jq '.[]|select(.dst=="default").dev')
+ip -j addr show ${ifdev?} | jq '.[0]|.addr_info[0].local'
+```
+
+
